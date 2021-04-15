@@ -32,13 +32,16 @@ module.exports = async (bot, message) => {
 				new MessageEmbed()
 					.setColor(`${dmcolour}`)
 					.setDescription(
-						`<a:ARROW:${dmarrowemoji}>┊[CLICK HERE TO DOWNLOAD YOUR AVATAR](${message.author.displayAvatarURL(
-							{ size: 2048 }
-						)})`
+						`<a:ARROW:${dmarrowemoji}>┊[Click Here To Invite Me.](https://discord.com/oauth2/authorize?client_id=${
+							bot.user.id
+						}&scope=bot&permissions=8)`
 					)
-					.setThumbnail(message.author.displayAvatarURL({ size: 2048 }))
+					.setThumbnail(bot.user.displayAvatarURL({ size: 2048 }))
 					.setAuthor(message.author.username, message.author.displayAvatarURL())
-					.setFooter(`┊DM┊  ${bot.user.username}`, bot.user.displayAvatarURL())
+					.setFooter(
+						`┊INVITE┊ME┊  ${bot.user.username}`,
+						bot.user.displayAvatarURL()
+					)
 			)
 			.then(m => {
 				m.delete({ timeout: 60000 }).catch(() => undefined);
