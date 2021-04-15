@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "🏖️ SANDY THE GREAT"
+git branch -M SANDY
+git remote add origin https://github.com/DURGESHYS/SANDY.git
+git push -u origin SANDY

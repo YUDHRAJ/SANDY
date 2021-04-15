@@ -1,0 +1,34 @@
+const db = require('quick.db');
+const Discord = require('discord.js');
+const config = require('../../botconfig.json');
+
+
+ module.exports = {
+    name: "",
+    hidden: false,
+    description: "",
+    usage: "",
+    category: "",
+    permissions: false,
+    admin: false,
+    mod: false,
+    guildowner: false,
+    owner: false,
+    aliases: [""],
+    timeout: false,
+    run: async (
+    		client,
+				message,
+				args,
+				colour,
+				commandname,
+				embed,
+				nickname,
+				prefix,
+				arrowemoji,
+				erroremoji,
+				sucessemoji,
+				wrongemoji
+    ) => {
+  }
+};
