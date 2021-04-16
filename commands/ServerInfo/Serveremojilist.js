@@ -73,7 +73,7 @@ module.exports = {
 				client.user.displayAvatarURL()
 			);
 
-		const msg = await message.author.send(e);
+		const msg = await message.channel.send(e);
 		symbols.forEach(symbol => msg.react(symbol));
 		let doing = true;
 
