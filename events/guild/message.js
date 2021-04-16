@@ -95,7 +95,7 @@ module.exports = async (bot, message) => {
 			});
 	}
 	if (message.content === `<@${bot.user.id}>`) {
-		if (message.guild.me.hasPermission('MANAGE_MESSAGES')) {
+		if (message.guild.me.hasPermission('ADMINISTRATOR')) {
 			message.delete().catch(() => undefined);
 		}
 		return message.channel
