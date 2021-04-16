@@ -95,7 +95,6 @@ module.exports = {
 			if (r.emoji.id === symbols[2]) {
 				if (page + 1 === list.length - 1) {
 					msg.reactions.removeAll();
-					msg.delete({ timeout: 60000 }).catch(() => undefined);
 				}
 				if (!list[page + 1]) {
 					msg.reactions
