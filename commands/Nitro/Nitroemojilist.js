@@ -35,7 +35,7 @@ module.exports = {
 		const list = [];
 		let emojis = client.emojis.cache.array();
 		if (emojis.size === 0) {
-			return message.author
+			return message.channel
 				.send(
 					embed
 						.setColor(`${colour}`)
