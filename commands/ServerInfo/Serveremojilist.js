@@ -93,6 +93,10 @@ module.exports = {
 			const u = message.author;
 			r = r.first();
 			if (r.emoji.id === symbols[2]) {
+				if (page + 1 === list.length - 1) {
+					msg.reactions.removeAll();
+					msg.delete({ timeout: 60000 }).catch(() => undefined);
+				}
 				if (!list[page + 1]) {
 					msg.reactions
 						.resolve(r.emoji.id)
@@ -116,6 +120,9 @@ module.exports = {
 				}
 			}
 			if (r.emoji.id === symbols[0]) {
+				if (page <= 1) {
+					page = 1;
+				}
 				if (!list[page + 1]) {
 					msg.reactions
 						.resolve(r.emoji.id)
