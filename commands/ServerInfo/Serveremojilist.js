@@ -35,12 +35,12 @@ module.exports = {
 		const list = [];
 		let emojis = message.guild.emojis.cache.array();
 		if (emojis.size === 0) {
-			return message.channel
+			return message.author
 				.send(
 					embed
 						.setColor(`${colour}`)
 						.setDescription(
-							`<a:ERROR:${erroremoji}>┊There are no Emojis in this server! `
+							`<a:ERROR:${erroremoji}>┊There are no Emojis in this Server! `
 						)
 						.setAuthor(nickname, message.author.displayAvatarURL())
 						.setFooter(
