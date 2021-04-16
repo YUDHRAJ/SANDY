@@ -176,8 +176,8 @@ module.exports = async (bot, message) => {
 			avatar: message.author.displayAvatarURL({ dynamic: true })
 		});
 
-		message.delete().catch(err => {});
-		await webhook.send(msg).catch(err => {});
+		message.delete().catch(() => undefined);
+		await webhook.send(msg).catch(() => undefined);
 
 		await webhook.edit({
 			name: `${bot.user.username}` + number,
